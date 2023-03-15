@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.chiragkachhadiya.charts.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_barChart"
+            app:destination="@id/barChartFragment" />
+        <action
+            android:id="@+id/action_pieChart"
+            app:destination="@id/pieChartFragment" />
+        <action
+            android:id="@+id/action_radarChart"
+            app:destination="@id/radarChartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/barChartFragment"
+        android:name="com.chiragkachhadiya.charts.BarChartFragment"
+        android:label="fragment_bar_chart"
+        tools:layout="@layout/fragment_bar_chart" />
+    <fragment
+        android:id="@+id/pieChartFragment"
+        android:name="com.chiragkachhadiya.charts.PieChartFragment"
+        android:label="fragment_pie_chart"
+        tools:layout="@layout/fragment_pie_chart" />
+    <fragment
+        android:id="@+id/radarChartFragment"
+        android:name="com.chiragkachhadiya.charts.RadarChartFragment"
+        android:label="fragment_radar_chart"
+        tools:layout="@layout/fragment_radar_chart" />
+</navigation>
